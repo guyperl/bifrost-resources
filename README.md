@@ -21,7 +21,7 @@ If you have any questions or problems, you can join us on **[discord](https://di
     - Connect to your VPS server as the root user
     - Type the following command to download the script:
     
-      ```wget "https://github.com/bifrost-actual/bifrost-resources/blob/master/masternode-install-script.sh"```
+      ```wget "https://raw.githubusercontent.com/bifrost-actual/bifrost-resources/master/masternode-install-script.sh"```
     - Next, type the following command to allow execution of the downloaded script:
     
       ```chmod +x masternode-install-script.sh```
