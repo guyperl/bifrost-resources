@@ -76,17 +76,25 @@ Password: (the password from your Vultr server detail screen)
 
 **Set up your collateral address**
 
-1. Open your local QT wallet, and go to the receive tab.
-2. In the label field, enter some identifying text (i.e. **MN1 Collateral**)
-3. In the amount field, type **5000**
-4. Make sure the **Reuse an existing receiving address** checkbox is not selected.
-5. Click the **Request payment** button
-6. A pop-up window will open with the payment request.  Click the **Copy address** button and close the pop-up
-7. Click the **send** tab.
-8. Paste the address into the appropriate field
-9. In the amount field, type **5000** (It's **critical** that this amount is exactly **5000**, no more or less)
-10. Click the **Send** button.
-11. If your wallet is locked, you will have to enter your password to complete the send operation.
+- Open your local QT wallet, and go to the receive tab.
+- In the label field, enter some identifying text (i.e. **MN1 Collateral**)
+- In the amount field, type **5000**
+- Make sure the **Reuse an existing receiving address** checkbox is not selected.
+
+  ![Request Payment](wallet_1.png)
+  
+- Click the **Request payment** button
+- A pop-up window will open with the payment request.  Click the **Copy address** button and close the pop-up
+
+  ![Payment Request Popup](wallet_2.png)
+  
+- Click the **send** tab.
+- Paste the address into the appropriate field
+- In the amount field, type **5000** (It's **critical** that this amount is exactly **5000**, no more or less)
+- Click the **Send** button.
+
+  ![Send Collateral](wallet_3.png)
+- If your wallet is locked, you will have to enter your password to complete the send operation.
 
 In your transaction log, there will be a new entry for payment to yourself.  Before you can start your masternode, this transaction has to receive **15 confirmations**.
 
@@ -103,6 +111,8 @@ Get your collateral transaction id
 - Copy these values to a notepad file, along with your masternode private key and IP address.
 - From the tools menu, select the menu item for **Open Masternode configuration file**
 
+  ![Menu](wallet_4.png)
+  
   This will open the file in your preferred text editor.  As you can see there is a description of the masternode definition format, and an example entry.
 - Create a new entry for your masternode on a blank line following the example.  Note - The alias you use should be descriptive, but have no spaces in it. (i.e. **MN1** or **MyNode**)
 - The IP address must include the port number of :9229
@@ -110,7 +120,7 @@ Get your collateral transaction id
 - The collateral_output_txid is the long string you saved from the `masternode outputs` command in the debug console.  Note, this string should be entered *without quotes around it*
 - The collateral_output_index is the number from the `masternode outputs` command.  Also without quotes.
 
-  *All of these pieces of information must be entered on the same line, and separated by a single space.*
+  *All of these pieces of information must be entered on the same line, and separated by a single space...just like the example line.*
 - Save and close this file, and restart your wallet.
 - Open the Masternodes tab, and you should see an entry for your new node.  The status should say **MISSING**
 - Once your collateral transaction has received 15 confirmations, you can start your masternode
@@ -119,6 +129,14 @@ IMPORTANT!
 
 There is currently a bug in the QT wallet that will throw an error if you attempt to start your masternode by clicking any of the start buttons on the masternodes screen.  Until this bug has been resolved, open your debug console and type: `masternode start-alias` followed by the name you gave your masternode in the configuration file.  The response should say **success**.
 
+Examples:
+```
+masternode start-alias MN1
+```
+or...
+```
+masternode start-alias MyNode
+```
 On the masternode screen, click the update status button and your masternode status should now say **ENABLED**
 
 That's it, your masternode is now running.  It will take several minutes to register itself with the other masternodes on the network, after which the active clock on your list will start increasing.  Shortly after that, your wallet address should start receiving rewards!
