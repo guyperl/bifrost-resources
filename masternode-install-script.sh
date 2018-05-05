@@ -174,7 +174,7 @@ configureWallet() {
     mnkey=$($COINCLIENT masternode genkey)
     $COINCLIENT stop > /dev/null 2>&1
     sleep 2
-    echo -e "rpcuser=${rpcuser}\nrpcpassword=${rpcpass}\nrpcport=${COINRPCPORT}\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\ntxindex=1\nlistenonion=0\nmasternode=1\nmasternodeaddr=${mnip}:${COINPORT}\nmasternodeprivkey=${mnkey}\n" > ~/$COINCORE/$COINCONFIG
+    echo -e "rpcuser=${rpcuser}\nrpcpassword=${rpcpass}\nrpcport=${COINRPCPORT}\nrpcallowip=127.0.0.1\ndaemon=1\nserver=1\nlisten=1\ntxindex=1\nlistenonion=0\nmasternode=1\nmasternodeaddr=${mnip}:${COINPORT}\nmasternodeprivkey=${mnkey}\nbantime=60\n" > ~/$COINCORE/$COINCONFIG
     echo -e "${NONE}${GREEN}* Done${NONE}";
 }
 
