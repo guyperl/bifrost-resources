@@ -11,8 +11,8 @@ UNDERLINE='\033[4m'
 MAX=10
 CURRSTEP=0
 
-COINDOWNLOADLINK=https://github.com/bifrost-actual/bifrost-coin/releases/download/v1.0.1/bifrost-1.0.1-aarch64-linux-gnu.tar.gz
-COINDOWNLOADFILE=bifrost-1.0.1-aarch64-linux-gnu.tar.gz
+COINDOWNLOADLINK=https://github.com/bifrost-actual/bifrost-coin/releases/download/v1.0.2/bifrost-1.0.2-aarch64-linux-gnu.tar.gz
+COINDOWNLOADFILE=bifrost-1.0.2-aarch64-linux-gnu.tar.gz
 COINREPO=https://github.com/bifrost-actual/bifrost-coin.git
 COINRPCPORT=9228
 COINPORT=9229
